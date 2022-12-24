@@ -92,13 +92,6 @@ const loginUser = async(req, res = response) => {
             msg: 'Please talk to the admin'
         })
     }
-
-    res.status(200).json({
-        ok: true,
-        msg: 'login',
-        email,
-        password,
-    })
 };
 
 const renewToken = async(req, res = response) => {
@@ -109,6 +102,8 @@ const renewToken = async(req, res = response) => {
 
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }
