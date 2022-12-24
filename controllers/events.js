@@ -8,7 +8,7 @@ const getEvents = async( req, res = response ) => {
 
     res.json({
         ok: true,
-        msg: events
+        events,
     })
 }
 
@@ -34,11 +34,6 @@ const createEvent = async( req, res = response ) => {
             msg: 'Talk to the admin'
         });
     }
-
-    res.json({
-        ok: true,
-        msg: 'createEvent'
-    })
 }
 
 const updateEvent = async( req, res = response ) => {
